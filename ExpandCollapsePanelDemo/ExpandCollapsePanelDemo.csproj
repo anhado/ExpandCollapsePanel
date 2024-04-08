@@ -94,4 +94,16 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<OutputPath>..\bin</OutputPath>
+		<IntermediateOutputPath>..\bin\int</IntermediateOutputPath>
+		<TargetFrameworks>net472;net48;net60-windows</TargetFrameworks>
+		<UseWindowsForms>true</UseWindowsForms>
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+	</PropertyGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\MakarovDev.ExpandCollapsePanel\MakarovDev.ExpandCollapsePanel.csproj" />
+	</ItemGroup>
 </Project>

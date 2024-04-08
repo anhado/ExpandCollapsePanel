@@ -4,6 +4,7 @@ using System.Windows.Forms.Design;
 
 namespace MakarovDev.ExpandCollapsePanel
 {
+#if NETFRAMEWORK
     /// <summary>
     ///     Designer for the ExpandCollapsePanel control with support for a smart tag panel.
     ///     <remarks>http://msdn.microsoft.com/en-us/library/ms171829.aspx</remarks>
@@ -29,4 +30,5 @@ namespace MakarovDev.ExpandCollapsePanel
             }
         }
     }
+#endif
 }
