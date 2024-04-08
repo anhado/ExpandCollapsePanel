@@ -1,13 +1,15 @@
 ﻿using System.ComponentModel.Design;
+using System.Security.Permissions;
+using System.Windows.Forms.Design;
 
 namespace MakarovDev.ExpandCollapsePanel
 {
     /// <summary>
-    /// Designer for the ExpandCollapsePanel control with support for a smart tag panel.
-    /// <remarks>http://msdn.microsoft.com/en-us/library/ms171829.aspx</remarks>
+    ///     Designer for the ExpandCollapsePanel control with support for a smart tag panel.
+    ///     <remarks>http://msdn.microsoft.com/en-us/library/ms171829.aspx</remarks>
     /// </summary>
-    [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
-    public class ExpandCollapsePanelDesigner : System.Windows.Forms.Design.ScrollableControlDesigner
+    [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+    public class ExpandCollapsePanelDesigner : ScrollableControlDesigner
     {
         private DesignerActionListCollection actionLists;
 
@@ -20,8 +22,9 @@ namespace MakarovDev.ExpandCollapsePanel
                 {
                     actionLists = new DesignerActionListCollection();
                     actionLists.Add(
-                        new ExpandCollapsePanelActionList(this.Component));
+                                    new ExpandCollapsePanelActionList(Component));
                 }
+
                 return actionLists;
             }
         }
