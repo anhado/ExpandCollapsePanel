@@ -129,19 +129,4 @@
     <Target Name="AfterBuild">
     </Target>
     -->
-﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<OutputPath>..\bin</OutputPath>
-		<IntermediateOutputPath>..\bin\int</IntermediateOutputPath>
-		<TargetFrameworks>net472;net48;net60-windows</TargetFrameworks>
-		<UseWindowsForms>true</UseWindowsForms>
-		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
-		<Copyright>Alexander Makarov - [makarov.dev@gmail.com] - 2013</Copyright>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="System.Resources.Extensions" Version="7.0.0" />
-	</ItemGroup>
-	<ItemGroup Condition="$(TargetFramework)!='net60-windows'">
-	  <Reference Include="System.Design" />
-	</ItemGroup>
 </Project>
